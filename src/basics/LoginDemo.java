@@ -1,3 +1,5 @@
+package basics;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,6 +21,15 @@ public class LoginDemo {
 
         WebElement btnLogin = driver.findElement(By.name("submit"));
         btnLogin.click();
+
+     //   driver.findElement(By.linkText("Add Customer")).click();
+        driver.findElement(By.partialLinkText("Add Cus")).click();
+
+        driver.findElement(By.name("name")).sendKeys("Navnath");
+        driver.findElement(By.name("address")).sendKeys("xyz");
+        driver.findElement(By.name("contact1")).sendKeys("343434343");
+        driver.findElement(By.name("contact2")).sendKeys("4343434");
+        driver.findElement(By.name("Submit")).click();
 
     }
 }
