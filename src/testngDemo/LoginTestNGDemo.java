@@ -1,31 +1,19 @@
-package Junit;
+package testngDemo;
 
-import org.junit.*;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
-public class LoginDemo3 {
-    static WebDriver driver;
-
-    @BeforeClass // method below this annotation will run before first test method
-    public static   void  openBrowser()
-    {
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-    }
-
-    @AfterClass  // method below this annotation will run after last test method
-    public static void close() throws InterruptedException {
-        Thread.sleep(4000);
-        driver.quit();
-    }
+public class LoginTestNGDemo {
 
 
     @Test
     public  void loginTest1() {
-
+        WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
         driver.get("https://stock.scriptinglogic.in/");
 
         WebElement txtUsername = driver.findElement(By.id("login-username"));
@@ -35,13 +23,14 @@ public class LoginDemo3 {
         txtPassword.sendKeys("admin");
 
         WebElement btnLogin = driver.findElement(By.name("submit"));
-      //  btnLogin.click();
+        btnLogin.click();
 
     }
 
     @Test
     public  void loginTest2() {
-
+        WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
         driver.get("https://stock.scriptinglogic.in/");
 
         WebElement txtUsername = driver.findElement(By.id("login-username"));
@@ -57,7 +46,8 @@ public class LoginDemo3 {
 
     @Test
     public  void loginTest3() {
-
+        WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
         driver.get("https://stock.scriptinglogic.in/");
 
         WebElement txtUsername = driver.findElement(By.id("login-username"));

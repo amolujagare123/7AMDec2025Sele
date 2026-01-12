@@ -1,23 +1,26 @@
-package Junit;
+package testngDemo;
 
-import org.junit.*;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
-public class LoginDemo3 {
-    static WebDriver driver;
+public class LoginDemo2 {
+    WebDriver driver;
 
-    @BeforeClass // method below this annotation will run before first test method
-    public static   void  openBrowser()
+    @BeforeMethod // method below this annotation will run before every test method
+    public  void  openBrowser()
     {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
 
-    @AfterClass  // method below this annotation will run after last test method
-    public static void close() throws InterruptedException {
+    @AfterMethod  // method below this annotation will run after every test method
+    public void close() throws InterruptedException {
         Thread.sleep(4000);
         driver.quit();
     }
@@ -35,7 +38,7 @@ public class LoginDemo3 {
         txtPassword.sendKeys("admin");
 
         WebElement btnLogin = driver.findElement(By.name("submit"));
-      //  btnLogin.click();
+        btnLogin.click();
 
     }
 
