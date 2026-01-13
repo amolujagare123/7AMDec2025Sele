@@ -2,6 +2,11 @@
 
 <suite name="TestEngine_Website_Automation_Suite">
 
+    <listeners>
+        <listener class-name="org.testng.reporters.EmailableReporter2"/>
+    </listeners>
+
+
     <test name="Social_and_Job_Sites_Test">
         <classes>
             <class name="testngDemo.realDemo.SocialMediaTestEngine"/>
