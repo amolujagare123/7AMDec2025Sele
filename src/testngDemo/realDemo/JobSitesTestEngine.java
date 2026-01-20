@@ -8,21 +8,9 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class JobSitesTestEngine {
+public class JobSitesTestEngine extends  Base {
 
-    WebDriver driver;
 
-    @BeforeClass
-    public void setUp() {
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-    }
-
-    @AfterClass
-    public void tearDown() throws InterruptedException {
-        Thread.sleep(4000);
-        driver.quit();
-    }
 
     @Test
     public void naukri() {

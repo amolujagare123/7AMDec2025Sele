@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="TestEngine_Website_Automation_Suite">
+
+    <listeners>
+        <listener class-name="ExtentReportsDemo.listeners.MyExtentListeners"/>
+    </listeners>
+
+
+    <test name="Social_and_Job_Sites_Test">
+        <classes>
+            <class name="testngDemo.realDemo.SocialMediaTestEngine"/>
+            <class name="testngDemo.realDemo.JobSitesTestEngine"/>
+        </classes>
+    </test>
+
+    <test name="AI_and_Tutorial_Sites_Test">
+        <classes>
+            <class name="testngDemo.realDemo.AISitesTestEngine"/>
+            <class name="testngDemo.realDemo.TutorialSitesTestEngine"/>
+        </classes>
+    </test>
+
+</suite>
